@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="SoftwareKobo.FireDoge.Controls.TabHeader"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:SoftwareKobo.FireDoge.Controls"
+             xmlns:model="clr-namespace:SoftwareKobo.FireDoge.Models"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance Type=model:TabPage}"
+             Padding="4,0,4,0"
+             Width="160">
+    <UserControl.Resources>
+        <ResourceDictionary Source="/Styles/TabHeaderStyle.xaml" />
+    </UserControl.Resources>
+    <StackPanel Orientation="Horizontal">
+        <local:FaviconIcon />
+        <TextBlock Style="{DynamicResource TitleStyle}"
+                   Text="{Binding Path=Model.Title}"
+                   Margin="4,0,0,0"
+                   VerticalAlignment="Center" />
+    </StackPanel>
+</UserControl>

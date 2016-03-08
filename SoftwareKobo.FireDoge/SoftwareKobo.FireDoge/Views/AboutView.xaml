@@ -1,0 +1,35 @@
+﻿<controls:MetroWindow x:Class="SoftwareKobo.FireDoge.Views.AboutView"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                      xmlns:local="clr-namespace:SoftwareKobo.FireDoge.Views"
+                      xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+                      mc:Ignorable="d"
+                      Title="关于"
+                      WindowStartupLocation="CenterOwner"
+                      Style="{DynamicResource AppDialogWindowStyle}"
+                      ShowCloseButton="True"
+                      IsCloseButtonEnabled="True"
+                      Width="400"
+                      Height="350">
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto"
+                      HorizontalScrollBarVisibility="Disabled">
+            <StackPanel Orientation="Vertical">
+                <Image Source="/Assets/Images/app_icon.png"
+                       Width="96"
+                       Height="96" />
+                <TextBlock Text="FireDoge by h82258652"
+                           TextAlignment="Center"
+                           FontSize="24"
+                           TextWrapping="Wrap" />
+                <StackPanel Margin="0,8,0,0">
+                    <TextBlock Margin="8"
+                               LineHeight="20">
+                        <Run Text="感谢以下第三方组件及其作者" /><LineBreak /><Run Text="CefSharp" /><LineBreak /><Run Text="Dragablz" /><LineBreak /><Run Text="MahApps" /><LineBreak /><Run Text="FontAwesome" /><LineBreak /><Run Text="Elmah.Io.FaviconLoader" /><LineBreak /><Run Text="MvvmLight" /></TextBlock>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</controls:MetroWindow>
